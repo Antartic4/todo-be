@@ -10,10 +10,7 @@ const app = express();
 // CORS Configuration
 app.use(
   cors({
-    origin: [
-      'http://localhost:3000',
-      'https://rjs-todolist-frontend-production.up.railway.app',
-    ],
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })
