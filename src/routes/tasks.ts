@@ -14,6 +14,12 @@ router.post('/', async (req, res) => {
   res.json(task);
 });
 
+router.get('/:id', async (req, res) => {
+  const { id } = req.params;
+  const task = await prisma.task.findUnique({ where: { id: Number(id) } });
+  res.json(task);
+});
+
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
   const { title, color, completed } = req.body;
