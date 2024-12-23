@@ -40,7 +40,6 @@ This is the backend API for the Todo List App, built with **Express.js** and **P
    - Create a `.env` file:
      ```env
      DATABASE_URL=mysql://<username>:<password>@localhost:3306/todo_db
-     PORT=3001
      ```
 
 4. Initialize the database:
